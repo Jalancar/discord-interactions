@@ -174,7 +174,7 @@ class Request:
         :type token: str
         """
         self.token = token
-        self._loop = get_event_loop() if version_info < (3, 10) else get_running_loop()
+        self._loop = get_event_loop()
         self.ratelimits = {}
         self.buckets = {}
         self._headers = {
